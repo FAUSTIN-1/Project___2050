@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Project-2050 Kigali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4b6cb7, #182848);
+            color: #fff;
+        }
+        header, footer {
+            background: #333;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2em;
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        .section h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 0.5em;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin-top: 1em;
+        }
+        .contact-icons img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .contact-details {
+            display: none;
+            text-align: center;
+            margin-top: 1em;
+        }
+        .orange-text {
+            color: orange;
+        }
+    </style>
+    <script>
+        function showContactDetails(type) {
+            var phoneDetails = document.getElementById('phoneDetails');
+            var emailDetails = document.getElementById('emailDetails');
+            var addressDetails = document.getElementById('addressDetails');
+            var hoursDetails = document.getElementById('hoursDetails');
+
+            phoneDetails.style.display = 'none';
+            emailDetails.style.display = 'none';
+            addressDetails.style.display = 'none';
+            hoursDetails.style.display = 'none';
+
+            if (type === 'phone') {
+                phoneDetails.style.display = 'block';
+            } else if (type === 'email') {
+                emailDetails.style.display = 'block';
+            } else if (type === 'address') {
+                addressDetails.style.display = 'block';
+            } else if (type === 'hours') {
+                hoursDetails.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Project-2050 Kigali</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="news.html">Latest News</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-icons">
+                <img src="phone.png" alt="Phone" onclick="showContactDetails('phone')">
+                <img src="gmail.png" alt="Email" onclick="showContactDetails('email')">
+                <img src="address.png" alt="Address" onclick="showContactDetails('address')">
+                <img src="business.png" alt="Business Hours" onclick="showContactDetails('hours')">
+            </div>
+            <div id="phoneDetails" class="contact-details">
+                <p><strong>Phone:</strong> +250 784 885 925</p>
+            </div>
+            <div id="emailDetails" class="contact-details">
+                <p><strong>Email:</strong> faustin@tuta.io</p>
+            </div>
+            <div id="addressDetails" class="contact-details">
+                <p><strong>Office Address:</strong> KK 686 St. Kigali</p>
+            </div>
+            <div id="hoursDetails" class="contact-details">
+                <p><strong>Business Hours:</strong> Monday to Friday: 9 AM - 6 PM, Saturday: 10 AM - 4 PM</p>
+            </div>
+            <h3>Follow Us</h3>
+            <a href="https://www.linkedin.com/in/faustin-nizeyimana-8aab85259?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BSugAghtAR36lGzLVKrxL9w%3D%3D" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn" style="width: 50px; height: 50px;">
+            </a>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Project-2050 Kigali. All rights reserved.</p>
+    </footer>
+</body>
+</html>
